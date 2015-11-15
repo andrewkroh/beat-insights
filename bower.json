@@ -1,0 +1,43 @@
+{
+  "name": "beatsDashboard",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular-github-adapter": "~0.1.2",
+    "angular-animate": "~1.4.2",
+    "angular-cookies": "~1.4.2",
+    "angular-touch": "~1.4.2",
+    "angular-sanitize": "~1.4.2",
+    "angular-messages": "~1.4.2",
+    "angular-aria": "~1.4.2",
+    "angular-resource": "~1.4.2",
+    "angular-ui-router": "~0.2.15",
+    "bootstrap-sass": "~3.3.5",
+    "angular-bootstrap": "~0.13.4",
+    "moment": "~2.10.6",
+    "animate.css": "~3.4.0",
+    "angular": "~1.4.2",
+    "angular-local-storage": "~0.2.3",
+    "font-awesome": "*"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.4.2"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "assets/stylesheets/_bootstrap.scss",
+        "assets/fonts/bootstrap/glyphicons-halflings-regular.eot",
+        "assets/fonts/bootstrap/glyphicons-halflings-regular.svg",
+        "assets/fonts/bootstrap/glyphicons-halflings-regular.ttf",
+        "assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
+        "assets/fonts/bootstrap/glyphicons-halflings-regular.woff2"
+      ]
+    },
+    "font-awesome": {
+      "main": "css/font-awesome.css"
+    }
+  },
+  "resolutions": {
+    "angular": "~1.4.2"
+  }
+}

@@ -1,0 +1,33 @@
+<div class="container">
+  <ak-navbar creation-date="main.creationDate"
+             class="ng-isolate-scope"></ak-navbar>
+             <h2>Pull Requests</h2>
+
+  <div class="table-responsive">
+    <table class="table">
+      <tr>
+        <th>Repo</th>
+        <th>#</th>
+        <th>Title</th>
+        <th>User</th>
+      </tr>
+      <tr ng-repeat="pr in main.pullRequests">
+        <td><a href="{{pr.repo.url }}">{{ pr.repo.name }}</a></td>
+        <td><a href="{{pr.html_url}}">#{{ pr.number }}</a></td>
+        <td>
+            <div>{{ pr.title }}</div>
+            <div style="display: inline-block;" ng-repeat="label in pr.labels">
+                <span class="label" style="background-color: #{{ label.color }}; color: #{{ main.getFontColor(label.color) }};"><i class="fa fa-tag"></i> {{ label.name }}</span>
+            </div>
+        </td>
+        <td><img ng-src="{{ pr.user.avatar_url }}" style="width: 2em;"/> <a
+          href="{{ pr.user.html_url }}">{{ pr.user.login }}</a></td>
+      </tr>
+    </table>
+  </div>
+  <!--
+  <div ng-repeat="pr in main.pullRequests">
+    <pre>{{ pr | json }}</pre>
+  </div>
+  -->
+</div>
