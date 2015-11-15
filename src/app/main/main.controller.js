@@ -12,7 +12,7 @@
     // Throttle API requests to 1 per minute.
     var cacheItem = localStorageService.get('pullRequests');
     if (cacheItem == null || moment().subtract(1, 'minute').isAfter(cacheItem.time)) {
-        github.search(null, function(value, responseHeaders) {
+        github.search(null, function(value) {
             vm.pullRequests = value.items;
 
             // Parse repo data from URLs so that we do not need to
