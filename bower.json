@@ -17,7 +17,7 @@
     "animate.css": "~3.4.0",
     "angular": "~1.4.2",
     "angular-local-storage": "~0.2.3",
-    "font-awesome": "*"
+    "fontawesome": "*"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.2"
@@ -32,9 +32,6 @@
         "assets/fonts/bootstrap/glyphicons-halflings-regular.woff",
         "assets/fonts/bootstrap/glyphicons-halflings-regular.woff2"
       ]
-    },
-    "font-awesome": {
-      "main": "css/font-awesome.css"
     }
   },
   "resolutions": {
