@@ -18,4 +18,4 @@ env:
   - secure: WdEAnHpDJhQBidNdRTN4kOl7W9hrut5ds2ZOLHEpiAngTKxR8sQGgkVS+AGNH0C2/R8o4wNe53Ig5QW/f+lBR7xXX7D3BDHAhLW4eeZTAeORX35P/fdkVZT5xBymR+0LCSxdWHlK6ltPLAjc4BoRd+25DIVmagNHMLZpVFtO0WuzY/YJ2UlG9/2TFRNZLIlfCBJ8yaojtGCk4CkNKffPZiAoQ+gGRi9QvANsvKdmxKSMwIdqjggFp2rOwCyoHAi6/fpj/NdA308BRNdXcroY0Y7LZySVtOC9JEwehyMXW86pW2+iD4U0Od+sW5NjxdO+T20qWnUaWRgCSThwcwVPMPhJ7dHi05+imidUC6g4oJ00ZG3wzlWOoyYT1yQj3YWMsaPleZLVSnS8hfAV8pO0kJQq4bGvc/abVteH/6RbV463amvgoZt5RIHbDloiIJsZH/DkB7UbgcJDr48+wP83x/XylHhCzz0ggx43/1Nc6UZt3f7JZqCxVkiR3BXtBsa1NHrGVqvGLd4vCbxhYG9WkjCDO/fEaHW16qsL/ZrOWslYSl4b5hxdrLbDO5iN7lRQ3wD/ZJcIbyq6Y5vazeMq7Rq5nsJKFanrM2Xg91khjfpUiXeVbygqqKKU3l8XgyNVm2fEKXLJ8M8Pd06E4lEog4knAfgXCi72uza1n+a2LQQ=
 
 after_success:
-  - if [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "master" ];  then make prod; fi
+  - if [ "$TRAVIS_REPO_SLUG" == "andrewkroh/master" ];  then make prod; fi
