@@ -6,8 +6,9 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, $github, localStorageService, github, moment) {
+  function MainController($timeout, $github, localStorageService, github, moment, $location, $stateParams) {
     var vm = this;
+    vm.filterString = $stateParams.q;
 
     // Throttle API requests to 1 per minute.
     var cacheItem = localStorageService.get('pullRequests');
@@ -67,5 +68,18 @@
         return '000000';
     }
 
+    vm.filter = function(labelName) {
+        if (angular.isDefined(labelName)) {
+          if (labelName === '') {
+              $location.search('q', null);
+          } else {
+              $location.search('q', labelName);
+          }
+
+          vm.filterString = labelName;
+        } else {
+            return vm.filterString;
+        }
+    };
   }
 })();

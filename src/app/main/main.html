@@ -7,7 +7,13 @@
     <div class="form-group">
       <div class="input-group">
         <div class="input-group-addon"><i class="fa fa-search"></i></div>
-        <input type="text" class="form-control" placeholder="Filter" ng-model="filterString">
+        <input type="text" class="form-control" placeholder="Filter" ng-model="main.filterString">
+        <a class="glyphicon glyphicon-remove-sign form-control-feedback form-control-clear"
+           style="pointer-events: auto; text-decoration: none;cursor: pointer;"
+           ng-show="main.filterString"
+           ng-click="main.filter('');"
+        ></a>
+
       </div>      
     </div>
   </form>
@@ -44,13 +50,15 @@
           </a>
         </th>
       </tr>
-      <tr ng-repeat="pr in main.pullRequests | orderBy:sortType:sortReverse | filter:filterString">
+      <tr ng-repeat="pr in main.pullRequests | orderBy:sortType:sortReverse | filter:main.filterString">
         <td><a href="{{pr.repo.url }}">{{ pr.repo.name }}</a></td>
         <td><a href="{{pr.html_url}}">#{{ pr.number }}</a></td>
         <td>
             <div>{{ pr.title }}</div>
             <div style="display: inline-block;" ng-repeat="label in pr.labels">
-                <span class="label" style="background-color: #{{ label.color }}; color: #{{ main.getFontColor(label.color) }};"><i class="fa fa-tag"></i> {{ label.name }}</span>
+                <a ng-click="main.filter(label.name);" style="text-decoration: none;">
+                    <span class="label" style="background-color: #{{ label.color }}; color: #{{ main.getFontColor(label.color) }};"><i class="fa fa-tag"></i> {{ label.name }}</span>
+                </a>
             </div>
         </td>
         <td><img ng-src="{{ pr.user.avatar_url }}" style="width: 2em;"/> <a
@@ -58,7 +66,9 @@
       </tr>
     </table>
   </div>
+  <!--
   <div ng-repeat="pr in main.pullRequests">
     <pre>{{ pr | json }}</pre>
   </div>
+  -->
 </div>

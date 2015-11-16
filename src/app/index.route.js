@@ -9,7 +9,7 @@
   function routerConfig($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {
-        url: '/',
+        url: '/?q',
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
         controllerAs: 'main'
