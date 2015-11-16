@@ -13,6 +13,7 @@ A dashboard for Elastic Beats developers.
 brew install npm
 npm install -g gulp bower
 npm install
+bower install
 ```
 
 ##### Develop
