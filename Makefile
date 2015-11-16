@@ -13,4 +13,4 @@ deps:
 	bower install
 
 prod:
-	aws s3 sync _site/ s3://beat-insights.andrewkroh.com --acl public-read --delete
+	aws s3 sync dist/ s3://beat-insights.andrewkroh.com --acl public-read --delete
