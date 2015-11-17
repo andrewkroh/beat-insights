@@ -14,8 +14,6 @@
     var cacheItem = localStorageService.get('pullRequests');
     if (cacheItem == null || moment().subtract(1, 'minute').isAfter(cacheItem.time)) {
         github.search(null, function(value) {
-            vm.pullRequests = value.items;
-
             // Parse repo data from URLs so that we do not need to
             // make an additional API request.
             value.items.forEach(function(e) {
@@ -34,6 +32,7 @@
 
             // Save data to local storage:
             localStorageService.set('pullRequests', cacheItem);
+            vm.pullRequests = value.items;
         });
     } else {
         vm.pullRequests = cacheItem.item;
