@@ -13,11 +13,11 @@
       'beats-dashboard',
       'beats-packer',
       'beats-tester',
-      'eventbeat',
       'filebeat',
       'libbeat',
       'packetbeat',
-      'topbeat'
+      'topbeat',
+      'winlogbeat'
     ];
 
     var repoQuery = repos.map(function(e) {
