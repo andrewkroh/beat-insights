@@ -14,6 +14,7 @@
       'beats-packer',
       'beats-tester',
       'filebeat',
+      'gosigar',
       'libbeat',
       'packetbeat',
       'topbeat',
