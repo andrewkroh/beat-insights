@@ -17,11 +17,13 @@
             // Parse repo data from URLs so that we do not need to
             // make an additional API request.
             value.items.forEach(function(e) {
-                var matches = e.url.match(/repos\/(\w+)\/(\w+)\//)
-                e.repo = {
-                    full_name: matches[1] + '/' +matches[2],
-                    name: matches[2],
-                    url: 'https://github.com/' + matches[1] + '/' +matches[2]
+                var matches = e.url.match(/repos\/([\w\-_]+)\/([\w\-_]+)\//)
+                if (matches !== null) {
+                    e.repo = {
+                        full_name: matches[1] + '/' +matches[2],
+                        name: matches[2],
+                        url: 'https://github.com/' + matches[1] + '/' +matches[2]
+                    }
                 }
             });
 
