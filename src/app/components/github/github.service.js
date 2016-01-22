@@ -10,6 +10,7 @@
     var apiHost = 'https://api.github.com';
 
     var repos = [
+      'beat-generator',
       'beats',
       'beats-dashboard',
       'beats-packer',
