@@ -17,6 +17,8 @@
       'beats-tester',
       'filebeat',
       'gosigar',
+      'go-lumber',
+      'go-ucfg',
       'libbeat',
       'packetbeat',
       'topbeat',
