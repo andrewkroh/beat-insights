@@ -18,9 +18,11 @@
       'filebeat',
       'gosigar',
       'go-lumber',
+      'go-libaudit',
       'go-ucfg',
       'libbeat',
       'packetbeat',
+      'procfs',
       'topbeat',
       'winlogbeat'
     ];
