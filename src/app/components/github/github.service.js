@@ -17,6 +17,7 @@
       'beats-tester',
       'filebeat',
       'gosigar',
+      'go-elasticsearch',
       'go-lumber',
       'go-libaudit',
       'go-ucfg',
