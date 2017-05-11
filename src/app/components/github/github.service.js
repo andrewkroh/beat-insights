@@ -42,6 +42,7 @@
 
     function search(query, callback) {
       return $resource(apiHost + '/search/issues', {
+        per_page: 100,
         q: 'type:pr state:open ' + repoQuery
       }).get(query, callback);
     }
